@@ -2,7 +2,7 @@ defmodule Issues.GithubIssues do
   @user_agent [ {"User-agent", "Elixir dave@pragprog.com"} ]
   @github_url Application.get_env(:issues, :github_url)
 
-  def issues_url do
+  def issues_url(user, project) do
     "#{@github_url}/repos/#{user}/#{project}/issues"
   end
 
